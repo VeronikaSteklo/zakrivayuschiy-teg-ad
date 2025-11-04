@@ -11,7 +11,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  font-variation-settings: "wght" var(--font-weight-normal);
+  font-variation-settings: "wght" var(--main-text-weight);
 }
 
 h1,

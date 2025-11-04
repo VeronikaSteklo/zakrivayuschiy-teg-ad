@@ -5,11 +5,20 @@
   gap: 12px;
 }
 
+.like-icon {
+  padding: 0;
+}
 .card__icon-button {
-  border: none;
+  display: flex;
+  padding: 0;
   background: transparent;
   cursor: pointer;
-  padding: 9px 0 0 ;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+  border: 2px solid transparent;
+  block-size: 38px;
+  inline-size: 38px;
 }
 
 .card__like-button {
