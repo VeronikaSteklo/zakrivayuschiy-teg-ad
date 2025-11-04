@@ -6,10 +6,6 @@
   text-transform: uppercase;
   background: var(--page-background-color, #ffffff);
   max-inline-size: 355px;
-}
-
-.modal[open] {
-  display: grid;
   padding: 0;
 }
 
@@ -27,6 +23,7 @@
   padding: 30px;
   width: clamp(21.3125rem, 21.75rem + 1.25vw, 22.0625rem);
 }
+
 .modal__content {
   display: flex;
   flex-direction: row;
