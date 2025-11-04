@@ -429,8 +429,8 @@
     <button
             class="button--save"
             type="button"
-            onclick="window['save-dialog'].showModal()"
-            aria-controls="save-dialog"
+            onclick="window.modal.showModal();"
+            aria-controls="modal"
     >
       <svg height="20" width="20" viewBox="0 0 39 39">
         <use xlink:href="svg/floppy.svg#floppy"></use>
@@ -439,19 +439,20 @@
     </button>
   </section>
 
-  <dialog class="modal" id="save-dialog">
-    <form class="modal__form" method="dialog">
-      <div class="modal__content">
-        <svg class="modal__icon" height="39" width="39" viewBox="0 0 39 39">
-          <use xlink:href="svg/floppy.svg#floppy"></use>
-        </svg>
-        <p class="modal__text">
-          Вставьте <br>
-          дискету, чтобы продолжить
-        </p>
-      </div>
-      <button class="modal__button" type="submit">
-        <span class="button__text">Ок</span>
+  <dialog class="modal" id="modal">
+    <!--    <form class="modal__form" method="dialog">-->
+    <div class="modal__content">
+      <svg class="modal__icon" height="39" width="39" viewBox="0 0 39 39">
+        <use xlink:href="svg/floppy.svg#floppy"></use>
+      </svg>
+      <p class="modal__text">
+        Вставьте <br>
+        дискету, чтобы продолжить
+      </p>
+    </div>
+    <form method="dialog" class="modal__buttons">
+      <button type="submit" class="button modal__button">
+        <span class="button__text">ок</span>
       </button>
     </form>
   </dialog>
