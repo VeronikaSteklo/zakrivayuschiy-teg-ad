@@ -7,6 +7,7 @@
   background: var(--page-background-color, #ffffff);
   max-inline-size: 355px;
   padding: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .modal::backdrop {
@@ -54,4 +55,13 @@
   width: 100%;
   height: 38px;
   text-transform: uppercase;
+}
+
+.modal[open] {
+  opacity: 1;
+}
+
+.modal:not([open]) {
+  opacity: 0;
+  pointer-events: none;
 }
