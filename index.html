@@ -500,21 +500,10 @@
       </svg>
       <p class="modal__text">Вставьте дискету, чтобы продолжить</p>
     </div>
-
-    <!-- Основная кнопка OK, закрывает окно через JS -->
-    <form>
-      <button
-              type="button"
-              class="button modal__button"
-              onclick="window.modal.close();"
-      >
+    <form method="dialog" class="modal__buttons" onsubmit="event.preventDefault(); window.modal.close();">
+      <button type="button" class="button modal__button">
         <span class="button__text">ок</span>
       </button>
-    </form>
-
-    <!-- Стандартный способ закрытия для теста -->
-    <form method="dialog">
-      <button class="close-button" style="display: none"></button>
     </form>
   </dialog>
 </main>
