@@ -1,0 +1,60 @@
+.modal {
+  border: 2px solid var(--text-color, #000000);
+  color: var(--text-color, #000000);
+  font-family: var(--accent-font, 'PressStart2P'), fantasy;
+  line-height: 1.5;
+  text-transform: uppercase;
+  background: var(--page-background-color, #ffffff);
+  max-inline-size: 355px;
+}
+
+.modal[open] {
+  display: grid;
+  padding: 0;
+}
+
+.modal::backdrop {
+  opacity: 0.75;
+  background: black;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  width: clamp(21.3125rem, 21.75rem + 1.25vw, 22.0625rem);
+}
+.modal__content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.modal__icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.modal__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.modal__button {
+  position: relative;
+  border: 2px solid var(--text-color, #000);
+  padding: 10px 17px;
+  background: var(--page-background-color, #fff);
+  font-family: var(--accent-font, 'PressStart2P'), sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  height: 38px;
+  text-transform: uppercase;
+}
