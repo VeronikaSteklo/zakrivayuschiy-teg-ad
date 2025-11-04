@@ -46,7 +46,7 @@
       <div class="button__container">
         <!-- Кнопка-обёртка для иконки сердца -->
         <button class="card__icon-button" type="button">
-                    <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
 
             <g class="heart">
               <!-- Контур сердца -->
@@ -104,7 +104,7 @@
       <div class="button__container">
         <!-- Кнопка-обёртка для иконки сердца -->
         <button class="card__icon-button" type="button">
-                    <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
 
             <g class="heart">
               <!-- Контур сердца -->
@@ -160,7 +160,7 @@
       <div class="button__container">
         <!-- Кнопка-обёртка для иконки сердца -->
         <button class="card__icon-button" type="button">
-                    <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
 
             <g class="heart">
               <!-- Контур сердца -->
@@ -217,7 +217,7 @@
       <div class="button__container">
         <!-- Кнопка-обёртка для иконки сердца -->
         <button class="card__icon-button" type="button">
-                    <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
 
             <g class="heart">
               <!-- Контур сердца -->
@@ -275,7 +275,7 @@
       <div class="button__container">
         <!-- Кнопка-обёртка для иконки сердца -->
         <button class="card__icon-button" type="button">
-                    <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
 
             <g class="heart">
               <!-- Контур сердца -->
@@ -331,7 +331,7 @@
       <div class="button__container">
         <!-- Кнопка-обёртка для иконки сердца -->
         <button class="card__icon-button" type="button">
-                    <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
 
             <g class="heart">
               <!-- Контур сердца -->
@@ -388,7 +388,7 @@
       <div class="button__container">
         <!-- Кнопка-обёртка для иконки сердца -->
         <button class="card__icon-button" type="button">
-                    <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
+          <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" xmlns="http://www.w3.org/2000/svg">
 
             <g class="heart">
               <!-- Контур сердца -->
@@ -483,53 +483,33 @@
       </div>
     </div>
   </section>
-
   <section class="button_save">
-    <button class="button button--save" type="button" aria-controls="modal">
-      <svg class="button__icon" viewBox="0 0 21 22">
-        <use href="./svg/floppy.svg#floppy"></use>
+    <button
+            type="button"
+            onclick="window.modal.showModal();"
+            aria-controls="modal"
+            class="button button--save"
+    >
+      <svg class="button__icon" viewBox="0 0 29 28">
+        <use href="svg/floppy.svg#floppy"/>
       </svg>
       <span class="button__text">Сохранить на память</span>
     </button>
   </section>
-
-  <dialog class="modal" id="modal">
-    <div class="modal__content">
-      <svg class="modal__icon" height="39" width="39" viewBox="0 0 39 39">
-        <use href="./svg/floppy.svg#floppy"></use>
-      </svg>
-      <p class="modal__text">Вставьте дискету, чтобы продолжить</p>
-    </div>
-    <div class="modal__buttons">
-      <button class="button modal__button" type="button">
-        <span class="button__text">Ок</span>
-      </button>
-    </div>
-  </dialog>
-
-  <script>
-      const modal = document.getElementById('modal');
-      const openBtn = document.querySelector('.button--save');
-      const closeBtn = modal.querySelector('.modal__button');
-
-      // открытие
-      openBtn.addEventListener('click', e => {
-          e.preventDefault();
-          modal.showModal();
-      });
-
-      // закрытие
-      closeBtn.addEventListener('click', e => {
-          e.preventDefault();
-          modal.close();
-      });
-
-      // закрытие по клику на фон
-      modal.addEventListener('click', e => {
-          if (e.target === modal) modal.close();
-      });
-  </script>
 </main>
+<dialog class="modal" id="modal">
+  <div class="modal__content">
+    <svg class="modal__icon" viewBox="0 0 29 28">
+      <use href="svg/floppy.svg#floppy"/>
+    </svg>
+    <p>Вставьте дискету,чтобы продолжить</p>
+  </div>
+  <form method="dialog">
+    <button type="submit" class="button modal__button">
+      <span class="button__text">ок</span>
+    </button>
+  </form>
+</dialog>
 <script src="./scripts/like.js"></script>
 </body>
 </html>
