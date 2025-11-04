@@ -483,7 +483,6 @@
     <button
             class="button button--save"
             type="button"
-            onclick="window.modal.showModal();"
             aria-controls="modal"
     >
       <svg class="button__icon" viewBox="0 0 21 22">
@@ -507,6 +506,25 @@
     </form>
   </dialog>
 </main>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const modalEl = document.getElementById('modal');
+    const openBtn = document.querySelector('.button--save');
+
+    if (openBtn && modalEl) {
+      openBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        modalEl.showModal();
+      });
+    }
+
+    modalEl.addEventListener('click', function (e) {
+      if (e.target === modalEl) {
+        modalEl.close();
+      }
+    });
+  });
+</script>
 <script src="./scripts/like.js"></script>
 </body>
 </html>
