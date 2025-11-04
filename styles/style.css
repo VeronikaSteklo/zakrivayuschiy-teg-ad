@@ -32,32 +32,19 @@
 
 .card__img-label {
   position: absolute;
-  z-index: 1;
-  opacity: 0.5;
-  color: var(--text-color, #000000);
-  font-family: var(--accent-font, 'PressStart2P'), fantasy;
+  z-index: 2;
+  opacity: 0.6;
+  color: var(--accent-clr, #000);
+  font-family: var(--accent-font, 'PressStart2P'), sans-serif;
   font-size: 14px;
   line-height: normal;
+  text-shadow: 1px 0 0 var(--bg-color),
+  -1px 0 0 var(--bg-color),
+  0 1px 0 var(--bg-color),
+  0 -1px 0 var(--bg-color);
   mix-blend-mode: hard-light;
   right: 25px;
   top: 25px;
-}
-
-.card__img-label {
-  position: absolute;
-  z-index: 2;
-  opacity: 0.6;
-  color: var(--accent-clr);
-  font-family: var(--accent-font), sans-serif;
-  text-shadow: 1px 0 0 var(--bg-color),
-  1px 0 0 var(--bg-color),
-  0 1px 0 var(--bg-color),
-  0 1px 0 var(--bg-color),
-  -1px 0 0 var(--bg-color),
-  -1px 0 0 var(--bg-color),
-  0 -1px 0 var(--bg-color),
-  0 -1px 0 var(--bg-color);
-  mix-blend-mode: hard-light;
 }
 
 @supports (

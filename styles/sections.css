@@ -17,6 +17,7 @@
 
 .section__image {
   width: 100%;
+  border: 2px solid var(--border-color);
 }
 
 .section__title {
@@ -26,10 +27,6 @@
   padding: 4px 10px 6px;
   border: 2px solid var(--border-color);
   z-index: 10;
-}
-
-.section__image {
-  border: 2px solid var(--border-color);
 }
 
 .text__container {

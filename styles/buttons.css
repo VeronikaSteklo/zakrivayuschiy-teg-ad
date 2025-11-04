@@ -47,10 +47,6 @@
   align-self: center;
 }
 
-.button--save {
-  color: var(--button-text-color, #000);
-}
-
 @media (width < 380px) {
   .button--save {
     flex-direction: column;
