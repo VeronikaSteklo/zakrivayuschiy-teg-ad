@@ -7,34 +7,28 @@
   background: var(--page-background-color, #fff);
   max-inline-size: 355px;
   padding: 30px;
-  transition: opacity 0.3s ease-in-out;
+
+  /* Скрываем по умолчанию */
+  display: none;
 }
 
-/* Меняем display только при открытии окна */
+/* Двухколоночная структура ТОЛЬКО при открытии */
 .modal[open] {
   display: grid;
   grid-template-rows: repeat(2, min-content);
   gap: 30px;
-  opacity: 1;
-}
-
-/* Когда окно закрыто */
-.modal:not([open]) {
-  opacity: 0;
-  pointer-events: none;
 }
 
 /* Задний слой */
 .modal::backdrop {
   background: rgb(0 0 0 / 75%);
-  opacity: 0.75;
 }
 
-/* Содержимое диалога — иконка + текст */
+/* Содержимое диалога — иконка + текст в две колонки */
 .modal__content {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: center;
   gap: 20px;
 }
 
@@ -63,4 +57,5 @@
   text-transform: uppercase;
   cursor: pointer;
   padding: 10px 17px;
+  transition: background-color 0.3s ease;
 }
