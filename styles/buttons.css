@@ -8,6 +8,13 @@
 .like-icon {
   padding: 0;
 }
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--text-color, #000000);
+}
 
 .card__icon-button {
   display: flex;
