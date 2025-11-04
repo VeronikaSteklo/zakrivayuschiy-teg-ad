@@ -1,4 +1,6 @@
 .modal {
+  display: flex;
+  flex-direction: column;
   border: 2px solid var(--text-color, #000);
   color: var(--text-color, #000);
   font-family: var(--accent-font, 'PressStart2P'), fantasy;
@@ -8,13 +10,20 @@
   max-inline-size: 355px;
   padding: 30px;
 
-  display: none;
-}
-
-.modal[open] {
-  display: grid;
+  /* Убрать display: none и добавить: */
   grid-template-rows: repeat(2, min-content);
   gap: 30px;
+
+  /* Скрыть по умолчанию */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Стили для открытого состояния */
+.modal[open] {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal::backdrop {
@@ -52,3 +61,10 @@
   padding: 10px 17px;
   transition: background-color 0.3s ease;
 }
+
+.modal__button:hover {
+  background: var(--text-color, #000);
+  color: var(--page-background-color, #fff);
+}
+
+
