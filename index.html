@@ -486,7 +486,7 @@
   <section class="button_save">
     <button
             type="button"
-            onclick="window.modal.showModal();"
+            onclick="window['modal'].showModal();"
             aria-controls="modal"
             class="button button--save"
     >
@@ -496,20 +496,23 @@
       <span class="button__text">Сохранить на память</span>
     </button>
   </section>
-</main>
-<dialog class="modal" id="modal">
-  <div class="modal__content">
-    <svg class="modal__icon" viewBox="0 0 29 28">
-      <use href="svg/floppy.svg#floppy" />
+  <dialog class="modal" id="modal">
+    <svg
+            class="modal__icon"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 39 39"
+    >
+      <use href="svg/floppy.svg#floppy"/>
     </svg>
-    <p>Вставьте дискету, чтобы продолжить</p>
-  </div>
-  <form method="dialog">
-    <button type="submit" class="button modal__button" onclick="window.modal.close();">
-      <span class="button__text">ок</span>
-    </button>
-  </form>
-</dialog>
+    <p class="modal__text">Вставьте дискету, чтобы продолжить</p>
+    <form class="modal__controller" method="dialog">
+      <button type="submit" class="button modal__button" onclick="window.modal.close();">
+        <span class="button__text">ок</span>
+      </button>
+    </form>
+  </dialog>
+</main>
 <script src="./scripts/like.js"></script>
 </body>
 </html>
