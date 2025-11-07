@@ -1,6 +1,10 @@
 .modal {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas:
+    "icon content"
+    "controller controller";
+  grid-template-columns: auto 1fr;
+  gap: 30px;
   border: 2px solid var(--text-color, #000);
   color: var(--text-color, #000);
   font-family: var(--accent-font, 'PressStart2P'), fantasy;
@@ -9,10 +13,6 @@
   background: var(--page-background-color, #fff);
   max-inline-size: 355px;
   padding: 30px;
-
-  /* Убрать display: none и добавить: */
-  grid-template-rows: repeat(2, min-content);
-  gap: 30px;
 
   /* Скрыть по умолчанию */
   opacity: 0;
@@ -30,23 +30,24 @@
   background: rgb(0 0 0 / 75%);
 }
 
-.modal__content {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 20px;
-}
-
 .modal__icon {
-  flex-shrink: 0;
+  grid-area: icon;
+  align-self: center;
   inline-size: 39px;
   block-size: 39px;
 }
 
 .modal__text {
+  grid-area: content;
+  align-self: center;
+  justify-self: start;
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
+}
+
+.modal__controller {
+  grid-area: controller;
 }
 
 .modal__button {
@@ -66,5 +67,3 @@
   background: var(--text-color, #000);
   color: var(--page-background-color, #fff);
 }
-
-
